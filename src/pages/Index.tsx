@@ -125,29 +125,90 @@ const PRICES = [
 const FAQ = [
   {
     q: "Как формируется стоимость заказа?",
-    a: "Цены формируются индивидуально: зависят от выбранной продукции, тиража, сложности дизайна и объёма услуг. Расчёт производится после согласования технического задания.",
+    a: "Стоимость складывается из: сырьё и материалы + расходники + добавленная стоимость + доставка. В пакетах «Импульс» и «Хроника» дополнительно включается дизайн-концепция. В «Импульсе» ещё и консалтинг. Точный расчёт — после согласования ТЗ.",
   },
   {
     q: "Что входит в пакет Импульс?",
-    a: "Полный цикл каждый квартал: разработка концепции, производство тематически связанных линеек подарков, доставка. Гарантированное бронирование слотов на оборудовании.",
+    a: "Полный цикл каждый квартал: разработка уникальной дизайн-концепции с погружением в брендбук (уровень 5 из 5), производство тематически связанных линеек, бронирование производственных слотов, контроль качества и доставка. Оплата — поэтапная. Длительность контракта до 5 месяцев.",
   },
   {
     q: "Можно ли заказать 1 штуку?",
-    a: "Да! Пакет «Отпечаток» предназначен именно для этого — штучные заказы без оптового минимума. Срок от 1 до 5 рабочих дней.",
+    a: "Да! Пакет «Отпечаток» — от 1 штуки. Срок от 2 недель до 2 месяцев. Подходит корпоративным и B2C клиентам. Доставка включена. Оплата — предоплата за партию.",
+  },
+  {
+    q: "В чём разница между Момент и Импульс?",
+    a: "«Момент» — разовый проект на до 3 месяцев с фиксированным тиражом. «Импульс» — стратегическое партнёрство: 4 линейки в год, бронирование слотов, программа лояльности с возможностью сокращать сроки, консалтинг и более глубокая проработка бренда (5 vs 3 из 5).",
+  },
+  {
+    q: "Что такое пакет Искра?",
+    a: "Пакет «Искра» — обработка ваших материалов. Клиент сам предоставляет заготовки (металл, дерево, пластик), мы делаем финишную обработку: лазерная гравировка, УФ-печать, маркировка. Минимум от 30 штук. Управление производственным циклом — частичное.",
   },
   {
     q: "Вы работаете с частными клиентами?",
-    a: "Да, пакет «Отпечаток» доступен как корпоративным, так и частным клиентам для приобретения единичных сувениров.",
+    a: "Да, пакет «Отпечаток» доступен для всех сегментов, включая B2C. Для корпоративных клиентов рекомендуем пакеты «Момент» или «Импульс» в зависимости от объёма и стратегических задач.",
   },
   {
-    q: "Как быстро изготавливается заказ в пакете Момент?",
-    a: "Срок изготовления в пакете «Момент» — до 2 месяцев. Базовые материалы клиентов из пакета «Импульс» обрабатываются приоритетно.",
+    q: "Какие условия оплаты?",
+    a: "«Импульс» — поэтапная оплата по этапам проекта. «Хроника» — годовая подписка. «Момент» и «Искра» — предоплата за партию. «Отпечаток» — предоплата за партию. Реквизиты и договор предоставляются после согласования ТЗ.",
+  },
+  {
+    q: "Есть ли программа лояльности?",
+    a: "Да, программа лояльности действует только в пакете «Хроника» — она позволяет сокращать производственные сроки при регулярных заказах. В остальных пакетах программы лояльности нет.",
+  },
+  {
+    q: "Можно ли вносить правки после запуска?",
+    a: "В «Импульсе» — да, на определённых этапах. В «Хронике» и «Момент» — да. В «Искра» — да, только на этапе дизайн-макета. В «Отпечатке» — нет: работа ведётся по согласованному макету.",
   },
   {
     q: "Есть ли у вас собственное оборудование?",
-    a: "Да, все материалы и оборудование — собственность компании. Это гарантирует контроль качества и независимость от внешних поставщиков.",
+    a: "Да, всё оборудование и сырьё — наша собственность. Это обеспечивает полный контроль качества, независимость от внешних поставщиков и возможность оперативно реагировать на изменения в заказе.",
+  },
+  {
+    q: "Как долго длится контракт?",
+    a: "«Импульс» — до 5 месяцев. «Хроника» — 1 год (с программой лояльности). «Момент» — до 3 месяцев. «Искра» — зависит от сложности обработки. «Отпечаток» — минимальный/срочный.",
   },
 ];
+
+const CASES = [
+  {
+    id: 1,
+    tag: "Пакет Импульс",
+    tagColor: "#FF8C00",
+    company: "IT-компания «ТехноСфера»",
+    task: "Корпоративные подарки на Новый год и день рождения компании — две отдельные тематические линейки для 200 сотрудников.",
+    solution: "Разработали единую дизайн-концепцию в корпоративных цветах с погружением в брендбук. Q1 — именные металлические флешки с гравировкой. Q3 — наборы: фотоальбом + картхолдер + 3D-стикеры. Бронирование слотов обеспечило соблюдение дедлайнов.",
+    result: "Два тиража по 200 штук, доставка по офисам в 3 городах, срок — в рамках квартального цикла. Стоимость проекта — от 154 950 ₽ за линейку.",
+    icon: "Building2",
+    metrics: [
+      { val: "400 шт.", label: "Изделий за год" },
+      { val: "3 города", label: "Доставка" },
+      { val: "5/5", label: "Глубина бренда" },
+    ],
+  },
+  {
+    id: 2,
+    tag: "Пакет Момент",
+    tagColor: "#3B82F6",
+    company: "Агентство «Медиастарт»",
+    task: "Брендированные сувениры для клиентского форума: 50 наборов (кубок + значок + ручка) с единым дизайном для вручения партнёрам.",
+    solution: "Создали дизайн-макеты под брендбук агентства. Кубки металлические с гравировкой, бейджи с логотипом, металлические ручки в фирменной упаковке. Полный цикл под ключ — от концепции до доставки в зал.",
+    result: "50 наборов готовы за 6 недель. Доставка в день форума. Контроль качества каждого изделия. Итоговая стоимость набора — около 1 900 ₽/шт.",
+    icon: "Megaphone",
+    metrics: [
+      { val: "50 наборов", label: "Тираж" },
+      { val: "6 недель", label: "Срок" },
+      { val: "3 позиции", label: "В наборе" },
+    ],
+  },
+];
+
+const CHAT_REPLIES: Record<string, string> = {
+  "Хочу узнать цены": "Цены зависят от пакета и продукции. Пакет «Отпечаток» — от 500 ₽/шт. «Момент» — от 13 220 ₽ за партию. «Искра» — от 5 925 ₽. «Импульс» — от 154 950 ₽/год. Могу рассчитать точнее — скажите, что нужно и в каком количестве?",
+  "Какой пакет выбрать?": "Расскажите о задаче — и я подберу оптимальный вариант! Если нужно 1–30 штук быстро — «Отпечаток» или «Искра». Для разовой партии от 20 шт. — «Момент». Для годового сотрудничества с линейками — «Импульс» или «Хроника».",
+  "Сроки изготовления": "«Отпечаток» — от 2 недель до 2 месяцев. «Момент» — до 3 месяцев. «Искра» — 1–4 месяца в зависимости от тиража. «Импульс» — производство по квартальному плану в течение года.",
+  "Есть доставка?": "Да, доставка включена во все пакеты! Работаем по всей России. Адресная доставка по офисам и городам. Уточните ваш регион — я назову примерные сроки.",
+  "Нужен 1 заказ": "Отлично! Для штучных заказов — пакет «Отпечаток». Минимум 1 штука, срок от 2 недель. Выберите продукцию (шармы, кубки, ручки, флешки и др.) и пришлите ваш логотип — мы сделаем расчёт за 24 часа.",
+};
 
 const STEPS = [
   { num: "01", title: "Заявка", desc: "Оставляете запрос — обсуждаем задачи и цели" },
@@ -166,6 +227,11 @@ export default function Index() {
   const [calcDesign, setCalcDesign] = useState("simple");
   const [openFaq, setOpenFaq] = useState<number | null>(null);
   const [formData, setFormData] = useState({ name: "", company: "", phone: "", message: "" });
+  const [chatOpen, setChatOpen] = useState(false);
+  const [chatInput, setChatInput] = useState("");
+  const [chatMessages, setChatMessages] = useState<{role: "user"|"bot"; text: string}[]>([
+    { role: "bot", text: "Привет! Я менеджер Мемори Продакшн. Чем могу помочь? Выберите вопрос ниже или напишите свой." },
+  ]);
 
   const getEstimate = () => {
     const base: Record<string, number> = { impulse: 80000, moment: 15000, spark: 10000, imprint: 500 };
@@ -427,25 +493,43 @@ export default function Index() {
               <table className="w-full">
                 <thead>
                   <tr className="border-b border-[#1f1f1f]">
-                    <th className="text-left px-6 py-3 font-body text-xs text-white/30 uppercase tracking-wider">Критерий</th>
-                    {PACKAGES.map((pkg) => (
-                      <th key={pkg.id} className="text-center px-4 py-3 font-display text-sm tracking-wide" style={{ color: pkg.accent }}>
-                        {pkg.name}
-                      </th>
-                    ))}
+                    <th className="text-left px-6 py-3 font-body text-xs text-white/30 uppercase tracking-wider min-w-[180px]">Критерий</th>
+                    <th className="text-center px-4 py-3 font-display text-sm tracking-wide text-orange-400 min-w-[120px]">ИМПУЛЬС</th>
+                    <th className="text-center px-4 py-3 font-display text-sm tracking-wide text-purple-400 min-w-[120px]">ХРОНИКА</th>
+                    <th className="text-center px-4 py-3 font-display text-sm tracking-wide text-blue-400 min-w-[120px]">МОМЕНТ</th>
+                    <th className="text-center px-4 py-3 font-display text-sm tracking-wide text-violet-400 min-w-[120px]">ИСКРА</th>
+                    <th className="text-center px-4 py-3 font-display text-sm tracking-wide text-emerald-400 min-w-[120px]">ОТПЕЧАТОК</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[#1a1a1a]">
-                  {[
-                    { label: "Глубина бренда", key: "brand" },
-                    { label: "Тип клиента", key: "client" },
-                    { label: "Категория партнёра", key: "partner" },
-                  ].map((row) => (
-                    <tr key={row.label} className="hover:bg-white/2 transition-colors">
-                      <td className="px-6 py-3 font-body text-xs text-white/50">{row.label}</td>
-                      {PACKAGES.map((pkg) => (
-                        <td key={pkg.id} className="text-center px-4 py-3 font-body text-xs text-white/70">
-                          {pkg.criteria[row.key as keyof typeof pkg.criteria]}
+                  {([
+                    { label: "Глубина проработки бренда (1–5)", vals: ["5", "5", "3", "3", "2"] },
+                    { label: "Интеграция эмоц. истории (1–5)", vals: ["5", "4", "3", "3", "2"] },
+                    { label: "Уникальность дизайн-концепции", vals: ["да", "да", "учитывается", "учитывается", "только логотип и текст"] },
+                    { label: "Кол-во продуктовых линеек", vals: ["1–3 вида / проект", "4 линейки / квартал", "по договор.", "по договор.", "1 тип товара"] },
+                    { label: "Управление производственным циклом", vals: ["полное", "полное", "полное", "частичное", "полное"] },
+                    { label: "Контроль качества", vals: ["да", "да", "да", "контроль обработки", "контроль нанесения"] },
+                    { label: "Финишная обработка", vals: ["да", "да", "да", "да", "да"] },
+                    { label: "Сырьё и материалы", vals: ["полная ответств.", "полная ответств.", "полная ответств.", "предоставляет клиент", "полная ответств."] },
+                    { label: "Срок изготовления", vals: ["1–6 мес. от тиража", "в течение года", "1–6 мес. от тиража", "1–4 мес. от тиража", "2 нед. – 2 мес."] },
+                    { label: "Длительность контракта", vals: ["до 5 мес.", "1 год", "до 3 мес.", "от сложности", "мин./срочный"] },
+                    { label: "Работа с материалами клиента", vals: ["нет", "нет", "нет", "да", "нет"] },
+                    { label: "Доставка", vals: ["да", "да", "да", "да", "да"] },
+                    { label: "Управление рисками", vals: ["да", "да", "да", "да", "нет"] },
+                    { label: "Бронирование производственных слотов", vals: ["нет", "да", "нет", "нет", "нет"] },
+                    { label: "Сопровождение менеджера на всех этапах", vals: ["да", "да", "да", "да", "только на этапе заказа"] },
+                    { label: "Возможность правок заказчиком", vals: ["да, на этапах", "да", "да", "да (только дизайн)", "нет"] },
+                    { label: "Программа лояльности", vals: ["нет", "да — сокращение сроков", "нет", "нет", "нет"] },
+                    { label: "Масштабируемость", vals: ["фикс. тираж", "договорный", "фикс. тираж", "фикс. тираж", "фикс. тираж"] },
+                    { label: "Категория партнёра", vals: ["Стратегический", "Долгосрочный", "Партнёр", "Услуга по пр-ву", "Единичная продажа"] },
+                    { label: "Стоимость включает", vals: ["сырьё+расходники+добавл.+доставка+дизайн+консалтинг", "сырьё+расходники+добавл.+доставка+дизайн+сотрудничество", "сырьё+расходники+добавл.+доставка+дизайн", "расходники+добавл.+дизайн+доставка", "сырьё+расходники+добавл.+доставка+простой дизайн"] },
+                    { label: "Условия оплаты", vals: ["поэтапная оплата", "годовая подписка", "предоплата за партию", "предоплата за партию", "предоплата за партию"] },
+                  ] as { label: string; vals: string[] }[]).map((row, ri) => (
+                    <tr key={ri} className={`hover:bg-white/[0.02] transition-colors ${ri % 2 === 0 ? "" : "bg-white/[0.01]"}`}>
+                      <td className="px-6 py-3 font-body text-xs text-white/50 whitespace-nowrap">{row.label}</td>
+                      {row.vals.map((val, vi) => (
+                        <td key={vi} className={`text-center px-4 py-3 font-body text-xs ${val === "да" ? "text-emerald-400" : val === "нет" ? "text-red-400/70" : "text-white/70"}`}>
+                          {val}
                         </td>
                       ))}
                     </tr>
@@ -724,6 +808,56 @@ export default function Index() {
         </div>
       </section>
 
+      {/* КЕЙСЫ */}
+      <section id="cases" className="py-24 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-14">
+            <div className="section-line mb-4" />
+            <h2 className="font-display text-4xl md:text-5xl uppercase tracking-tight mb-4">Кейсы</h2>
+            <p className="font-body text-white/50 text-lg max-w-xl">Реальные проекты — от постановки задачи до готовой продукции</p>
+          </div>
+          <div className="grid md:grid-cols-2 gap-8">
+            {CASES.map((c) => (
+              <div key={c.id} className="rounded-2xl bg-[#111] border border-[#1f1f1f] overflow-hidden card-hover flex flex-col">
+                <div className="p-7 flex-1">
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="w-10 h-10 rounded-xl flex items-center justify-center shrink-0" style={{ backgroundColor: c.tagColor + "22" }}>
+                      <Icon name={c.icon} size={20} fallback="Building2" style={{ color: c.tagColor }} />
+                    </div>
+                    <div>
+                      <div className="font-display text-base tracking-wide">{c.company}</div>
+                      <div className="inline-block font-body text-xs px-2 py-0.5 rounded-full mt-1" style={{ backgroundColor: c.tagColor + "22", color: c.tagColor }}>{c.tag}</div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div>
+                      <div className="font-body text-xs text-white/30 uppercase tracking-widest mb-1">Задача</div>
+                      <p className="font-body text-sm text-white/70 leading-relaxed">{c.task}</p>
+                    </div>
+                    <div>
+                      <div className="font-body text-xs text-white/30 uppercase tracking-widest mb-1">Решение</div>
+                      <p className="font-body text-sm text-white/70 leading-relaxed">{c.solution}</p>
+                    </div>
+                    <div>
+                      <div className="font-body text-xs text-white/30 uppercase tracking-widest mb-1">Результат</div>
+                      <p className="font-body text-sm text-white/70 leading-relaxed">{c.result}</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="border-t border-[#1f1f1f] px-7 py-4 grid grid-cols-3 gap-4">
+                  {c.metrics.map((m) => (
+                    <div key={m.label}>
+                      <div className="font-display text-lg gradient-text">{m.val}</div>
+                      <div className="font-body text-xs text-white/30 mt-0.5">{m.label}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* FAQ */}
       <section id="faq" className="py-24 px-6 bg-[#070707]">
         <div className="max-w-4xl mx-auto">
@@ -844,6 +978,81 @@ export default function Index() {
           </div>
         </div>
       </section>
+
+      {/* ЧАТ С МЕНЕДЖЕРОМ */}
+      <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3">
+        {chatOpen && (
+          <div className="w-80 rounded-2xl bg-[#111] border border-[#222] shadow-2xl overflow-hidden flex flex-col" style={{ maxHeight: 480 }}>
+            <div className="flex items-center gap-3 px-4 py-3 bg-gradient-to-r from-orange-500 to-amber-400">
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center shrink-0">
+                <Icon name="User" size={16} className="text-white" fallback="User" />
+              </div>
+              <div>
+                <div className="font-display text-sm text-white tracking-wide">Менеджер</div>
+                <div className="font-body text-xs text-white/70">Мемори Продакшн · онлайн</div>
+              </div>
+              <button onClick={() => setChatOpen(false)} className="ml-auto text-white/70 hover:text-white">
+                <Icon name="X" size={16} fallback="X" />
+              </button>
+            </div>
+            <div className="flex-1 overflow-y-auto p-4 space-y-3" style={{ maxHeight: 260 }}>
+              {chatMessages.map((msg, i) => (
+                <div key={i} className={`flex ${msg.role === "user" ? "justify-end" : "justify-start"}`}>
+                  <div className={`rounded-2xl px-3 py-2 max-w-[85%] font-body text-xs leading-relaxed ${msg.role === "user" ? "bg-orange-500 text-white rounded-br-sm" : "bg-[#1a1a1a] text-white/80 rounded-bl-sm"}`}>
+                    {msg.text}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="px-3 pb-3 space-y-2">
+              <div className="flex flex-wrap gap-1.5">
+                {Object.keys(CHAT_REPLIES).map((q) => (
+                  <button
+                    key={q}
+                    onClick={() => {
+                      const reply = CHAT_REPLIES[q];
+                      setChatMessages(prev => [...prev, { role: "user", text: q }, { role: "bot", text: reply }]);
+                    }}
+                    className="font-body text-xs px-2.5 py-1 rounded-full bg-[#1a1a1a] border border-[#2a2a2a] text-white/60 hover:border-orange-500/40 hover:text-white transition-all"
+                  >
+                    {q}
+                  </button>
+                ))}
+              </div>
+              <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  if (!chatInput.trim()) return;
+                  setChatMessages(prev => [...prev,
+                    { role: "user", text: chatInput },
+                    { role: "bot", text: "Спасибо! Ваш вопрос принят. Менеджер ответит в ближайшее время. Для срочных вопросов — позвоните по номеру на сайте." }
+                  ]);
+                  setChatInput("");
+                }}
+                className="flex gap-2"
+              >
+                <input
+                  value={chatInput}
+                  onChange={(e) => setChatInput(e.target.value)}
+                  placeholder="Ваш вопрос..."
+                  className="flex-1 rounded-xl bg-[#1a1a1a] border border-[#2a2a2a] text-white font-body text-xs px-3 py-2 focus:border-orange-500/50 focus:outline-none"
+                />
+                <button type="submit" className="btn-primary rounded-xl px-3 py-2">
+                  <span><Icon name="Send" size={14} className="text-white" fallback="Send" /></span>
+                </button>
+              </form>
+            </div>
+          </div>
+        )}
+        <button
+          onClick={() => setChatOpen(!chatOpen)}
+          className="btn-primary w-14 h-14 rounded-full flex items-center justify-center shadow-lg"
+        >
+          <span>
+            <Icon name={chatOpen ? "X" : "MessageCircle"} size={22} className="text-white" fallback="MessageCircle" />
+          </span>
+        </button>
+      </div>
 
       {/* FOOTER */}
       <footer className="border-t border-[#1f1f1f] py-8 px-6">
