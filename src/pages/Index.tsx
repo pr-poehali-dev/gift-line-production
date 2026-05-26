@@ -908,8 +908,8 @@ export default function Index() {
               <div className="space-y-4">
                 {[
                   { icon: "Phone", val: "+7 (XXX) XXX-XX-XX" },
-                  { icon: "Mail", val: "info@memoryproduction.ru" },
-                  { icon: "MapPin", val: "г. Москва, ул. Производственная" },
+                  { icon: "Mail", val: "info@momentshop.ru" },
+                  { icon: "MapPin", val: "г. Санкт-Петербург" },
                 ].map((c) => (
                   <div key={c.val} className="flex items-center gap-4">
                     <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center">
