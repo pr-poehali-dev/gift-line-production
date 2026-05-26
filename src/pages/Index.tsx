@@ -230,7 +230,7 @@ export default function Index() {
   const [chatOpen, setChatOpen] = useState(false);
   const [chatInput, setChatInput] = useState("");
   const [chatMessages, setChatMessages] = useState<{role: "user"|"bot"; text: string}[]>([
-    { role: "bot", text: "Привет! Я менеджер Мемори Продакшн. Чем могу помочь? Выберите вопрос ниже или напишите свой." },
+    { role: "bot", text: "Привет! Я менеджер Магазина Момент. Чем могу помочь? Выберите вопрос ниже или напишите свой." },
   ]);
 
   const getEstimate = () => {
@@ -606,7 +606,7 @@ export default function Index() {
                 {[
                   { icon: "Shield", title: "Контроль качества", desc: "Каждое изделие проходит контроль перед отправкой" },
                   { icon: "Zap", title: "Быстрая реакция", desc: "Оперативные изменения в продукции по требованию" },
-                  { icon: "Lock", title: "Независимость", desc: "Не зависим от сторонних поставщиков ресурсов" },
+                  { icon: "MapPin", title: "Санкт-Петербург", desc: "Производство и доставка по всей России" },
                 ].map((item) => (
                   <div key={item.title} className="flex gap-4 p-4 rounded-xl bg-[#111] border border-[#1f1f1f]">
                     <div className="w-10 h-10 rounded-lg bg-orange-500/10 flex items-center justify-center shrink-0">
@@ -987,7 +987,7 @@ export default function Index() {
               </div>
               <div>
                 <div className="font-display text-sm text-white tracking-wide">Менеджер</div>
-                <div className="font-body text-xs text-white/70">Мемори Продакшн · онлайн</div>
+                <div className="font-body text-xs text-white/70">Магазин Момент · Санкт-Петербург</div>
               </div>
               <button onClick={() => setChatOpen(false)} className="ml-auto text-white/70 hover:text-white">
                 <Icon name="X" size={16} fallback="X" />
