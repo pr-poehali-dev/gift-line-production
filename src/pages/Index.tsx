@@ -1059,7 +1059,7 @@ export default function Index() {
             <span className="gradient-text">МАГАЗИН МОМЕНТ</span>
           </div>
           <div className="font-body text-xs text-white/25 text-center">
-            © 2024 Корпоративная сувенирная продукция. Все права защищены.
+            © 2026 Магазин Момент. Все права защищены.
           </div>
           <div className="flex gap-6 text-xs font-body text-white/30">
             <a href="#packages" className="hover:text-orange-400 transition-colors">Пакеты</a>
