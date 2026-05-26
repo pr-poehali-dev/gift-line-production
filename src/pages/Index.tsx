@@ -253,8 +253,7 @@ export default function Index() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-[#0A0A0A]/90 backdrop-blur-md border-b border-[#1f1f1f]">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="font-display text-xl tracking-widest text-white">
-            <span className="gradient-text">МЕМОРИ</span>
-            <span className="text-white/50 text-sm ml-2 font-body">ПРОДАКШН</span>
+            <span className="gradient-text">МАГАЗИН МОМЕНТ</span>
           </div>
           <div className="hidden md:flex items-center gap-8 text-sm font-body text-white/60">
             <a href="#packages" className="hover:text-[#FF8C00] transition-colors">Пакеты</a>
@@ -292,9 +291,8 @@ export default function Index() {
               <span className="text-orange-400 text-xs font-body font-semibold tracking-widest uppercase">Собственное производство</span>
             </div>
             <h1 className="font-display text-5xl md:text-7xl leading-none mb-6 uppercase tracking-tight">
-              Корпоративные<br />
-              <span className="gradient-text">сувениры</span><br />
-              под&nbsp;ключ
+              <span className="gradient-text">Магазин</span><br />
+              <span className="gradient-text">Момент</span>
             </h1>
             <p className="font-body text-white/60 text-lg leading-relaxed mb-8 max-w-lg">
               От штучного заказа до годовой линейки брендированных подарков.
@@ -1058,8 +1056,7 @@ export default function Index() {
       <footer className="border-t border-[#1f1f1f] py-8 px-6">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="font-display text-lg tracking-widest">
-            <span className="gradient-text">МЕМОРИ</span>
-            <span className="text-white/30 text-sm ml-2 font-body">ПРОДАКШН</span>
+            <span className="gradient-text">МАГАЗИН МОМЕНТ</span>
           </div>
           <div className="font-body text-xs text-white/25 text-center">
             © 2024 Корпоративная сувенирная продукция. Все права защищены.
