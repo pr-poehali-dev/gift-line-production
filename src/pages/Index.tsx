@@ -21,50 +21,64 @@ const PACKAGES = [
     tag: "Годовой контракт",
     color: "from-orange-500 to-amber-400",
     accent: "#FF8C00",
-    duration: "1 год",
-    qty: "Договорной тираж",
+    price: "от 154 950 ₽",
+    minQty: "50 штук",
+    duration: "4 линейки в год",
     highlight: true,
+    desc: "Полный цикл каждый квартал: тематически связанные линейки подарков с единой годовой стратегией.",
     features: [
-      "Тематически связанные линейки подарков",
-      "Гарантированное бронирование слотов",
+      "4 линейки (1–3 вида) в рамках одного заказа",
+      "Гарантированное бронирование производственных слотов",
       "Сокращённые сроки для срочных запросов",
       "Единая годовая маркетинговая стратегия",
       "Доставка до места включена",
-      "Полный цикл производства каждый квартал",
+      "Глубина проработки бренда: 5 из 5",
+      "Программа лояльности — возможность сокращать сроки",
     ],
+    criteria: { brand: "5/5", client: "Все сегменты", partner: "Долгосрочный партнёр" },
   },
   {
     id: "moment",
     name: "МОМЕНТ",
-    tag: "Серийное производство",
+    tag: "Бюджетный аналог",
     color: "from-blue-500 to-cyan-400",
     accent: "#3B82F6",
+    price: "от 13 220 ₽",
+    minQty: "от 10 штук",
     duration: "до 2 месяцев",
-    qty: "от 10 штук",
     highlight: false,
+    desc: "Дизайнерские макеты с нанесением простого дизайна, полное управление циклом производства без персонализации.",
     features: [
-      "Дизайнерские макеты с нанесением",
+      "Разработка дизайнерских макетов с нанесением",
       "Полное управление циклом производства",
       "Устранение производственных рисков",
-      "Контроль качества на всех этапах",
-      "Все основные циклы изготовления",
-      "Линейки продукции по договорённости",
+      "Контроль качества сувенирной продукции",
+      "Все основные циклы изготовления (кроме персонализации)",
+      "Количество линеек по договорённости с заказчиком",
+      "Глубина проработки бренда: 3 из 5",
     ],
+    criteria: { brand: "3/5", client: "Все сегменты", partner: "Партнёр" },
   },
   {
     id: "spark",
     name: "ИСКРА",
-    tag: "Скоро",
+    tag: "Финишная обработка",
     color: "from-violet-500 to-purple-400",
     accent: "#8B5CF6",
-    duration: "—",
-    qty: "—",
+    price: "от 5 925 ₽",
+    minQty: "от 30 штук",
+    duration: "Зависит от объёма",
     highlight: false,
+    desc: "Финишная обработка материалов клиента: лазерная гравировка, УФ-печать, маркировка на ваших заготовках.",
     features: [
-      "Информация скоро появится",
-      "Следите за обновлениями",
+      "Клиент предоставляет собственные материалы",
+      "Металлические заготовки, дерево, пластик и др.",
+      "Лазерная гравировка и УФ-печать",
+      "Разработка и согласование дизайна",
+      "Контроль качества и доставка готовых изделий",
+      "Глубина проработки бренда: 3 из 5",
     ],
-    coming: true,
+    criteria: { brand: "3/5", client: "Первый и второй сегмент", partner: "Услуга по производству" },
   },
   {
     id: "imprint",
@@ -72,18 +86,40 @@ const PACKAGES = [
     tag: "Штучный заказ",
     color: "from-emerald-500 to-green-400",
     accent: "#10B981",
+    price: "от 500 ₽ за шт.",
+    minQty: "от 1 штуки",
     duration: "1–5 рабочих дней",
-    qty: "от 1 штуки",
     highlight: false,
+    desc: "Штучная покупка сувениров для корпоративных и частных клиентов без оптовой закупки.",
     features: [
-      "Корпоративные и частные клиенты",
-      "Нанесение логотипа, текста, изображения",
-      "Готовые носители из ассортимента",
-      "Без минимального тиража",
-      "Шармы, стикеры, кружки, футболки",
-      "Быстрое изготовление",
+      "Шармы, стикеры, кружки, футболки и др.",
+      "Нанесение логотипа, текста или изображения",
+      "Готовые носители из стандартного ассортимента",
+      "Без минимального тиража — от 1 штуки",
+      "Доступно корпоративным и частным клиентам",
+      "Глубина проработки бренда: 2 из 5",
     ],
+    criteria: { brand: "2/5", client: "Все сегменты, B2C", partner: "Единичная продажа" },
   },
+];
+
+const PRICES = [
+  { name: "Двусторонний шарм", price: "531 ₽" },
+  { name: "Ручки пластмассовые", price: "109 ₽" },
+  { name: "Ручки металлические", price: "171 ₽" },
+  { name: "Ручки бумажные", price: "100 ₽" },
+  { name: "Флешка 120 гб", price: "1 080 ₽" },
+  { name: "Флешка 256 гб", price: "1 266 ₽" },
+  { name: "Статуэтки 3D", price: "502 ₽" },
+  { name: "Бутылки пластмассовые", price: "203 ₽" },
+  { name: "Бутылки металлические", price: "554 ₽" },
+  { name: "Фотоальбомы", price: "754 ₽" },
+  { name: "3D стикеры (набор 5 шт.)", price: "415 ₽" },
+  { name: "Картхолдеры", price: "629 ₽" },
+  { name: "Бейджи", price: "889,5 ₽" },
+  { name: "Кубки металлические", price: "1 138 ₽" },
+  { name: "Кубки деревянные", price: "799 ₽" },
+  { name: "Кубки пластиковые", price: "461 ₽" },
 ];
 
 const FAQ = [
@@ -264,6 +300,60 @@ export default function Index() {
         </div>
       </section>
 
+      {/* ПРЕИМУЩЕСТВА */}
+      <section id="advantages" className="py-20 px-6 bg-[#070707]">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-12">
+            <div className="section-line mb-4" />
+            <h2 className="font-display text-4xl md:text-5xl uppercase tracking-tight mb-4">Наше преимущество</h2>
+            <p className="font-body text-white/50 text-lg max-w-2xl">
+              Комплексный подход — от разработки дизайна с погружением в брендбук до адресной доставки
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="rounded-2xl bg-gradient-to-br from-orange-500/10 to-amber-400/5 border border-orange-500/20 p-8">
+              <div className="font-display text-2xl mb-4 gradient-text">Комплексное сопровождение</div>
+              <p className="font-body text-white/60 leading-relaxed mb-6">
+                В отличие от большинства российских компаний, мы предлагаем полноценное сопровождение проекта —
+                от индивидуального дизайна с полным погружением в брендбук заказчика до финишной персонализации,
+                контроля качества и адресной доставки.
+              </p>
+              <div className="grid grid-cols-2 gap-3">
+                {[
+                  { icon: "Palette", text: "Разработка дизайна под брендбук" },
+                  { icon: "Shield", text: "Контроль качества каждого изделия" },
+                  { icon: "Truck", text: "Адресная доставка" },
+                  { icon: "Users", text: "HR-задачи и корпоративная идентичность" },
+                ].map((item) => (
+                  <div key={item.text} className="flex items-start gap-3 p-3 rounded-xl bg-white/5">
+                    <Icon name={item.icon} size={16} className="text-orange-400 mt-0.5 shrink-0" fallback="Check" />
+                    <span className="font-body text-xs text-white/70 leading-relaxed">{item.text}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-2 gap-4">
+              {[
+                { icon: "Target", title: "Рекламные задачи", desc: "Брендированная продукция усиливает присутствие компании" },
+                { icon: "Heart", title: "HR-задачи", desc: "Повышение лояльности сотрудников и корпоративный дух" },
+                { icon: "BookMarked", title: "Корпоративная история", desc: "Материальные носители ценностей и истории компании" },
+                { icon: "Fingerprint", title: "Корпоративная идентичность", desc: "Формирование узнаваемого фирменного стиля" },
+              ].map((item) => (
+                <div key={item.title} className="rounded-2xl bg-[#111] border border-[#222] p-5 card-hover">
+                  <div className="w-10 h-10 rounded-xl bg-orange-500/10 flex items-center justify-center mb-3">
+                    <Icon name={item.icon} size={18} className="text-orange-400" fallback="Star" />
+                  </div>
+                  <div className="font-display text-sm tracking-wide mb-1">{item.title}</div>
+                  <div className="font-body text-xs text-white/40 leading-relaxed">{item.desc}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ПАКЕТЫ */}
       <section id="packages" className="py-24 px-6">
         <div className="max-w-7xl mx-auto">
@@ -275,33 +365,34 @@ export default function Index() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
             {PACKAGES.map((pkg) => (
               <div
                 key={pkg.id}
                 onClick={() => setActivePackage(pkg.id)}
-                className={`relative rounded-2xl p-6 border cursor-pointer card-hover transition-all duration-300 ${
+                className={`relative rounded-2xl p-6 border cursor-pointer card-hover transition-all duration-300 flex flex-col ${
                   activePackage === pkg.id
                     ? "border-orange-500/50 bg-[#161616]"
                     : "border-[#222] bg-[#111]"
-                } ${pkg.coming ? "opacity-60" : ""}`}
+                }`}
               >
                 {pkg.highlight && (
                   <div className="absolute -top-3 left-6 bg-gradient-to-r from-orange-500 to-amber-400 rounded-full px-3 py-0.5 text-xs font-body font-bold text-black">
                     Популярный
                   </div>
                 )}
-                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${pkg.color} mb-4 flex items-center justify-center`}>
+                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${pkg.color} mb-4 flex items-center justify-center shrink-0`}>
                   <Icon
-                    name={pkg.id === "impulse" ? "Zap" : pkg.id === "moment" ? "Clock" : pkg.id === "spark" ? "Sparkles" : "Stamp"}
+                    name={pkg.id === "impulse" ? "Zap" : pkg.id === "moment" ? "Clock" : pkg.id === "spark" ? "Flame" : "Stamp"}
                     size={20}
                     className="text-white"
                     fallback="Star"
                   />
                 </div>
                 <div className="font-display text-2xl tracking-wider mb-1">{pkg.name}</div>
-                <div className="font-body text-xs text-white/40 mb-4">{pkg.tag}</div>
-                <div className="space-y-2 mb-6">
+                <div className="font-body text-xs text-white/40 mb-3">{pkg.tag}</div>
+                <p className="font-body text-xs text-white/50 leading-relaxed mb-4">{pkg.desc}</p>
+                <div className="space-y-2 mb-4 flex-1">
                   {pkg.features.map((f, i) => (
                     <div key={i} className="flex items-start gap-2">
                       <div className="w-1.5 h-1.5 rounded-full mt-1.5 shrink-0" style={{ backgroundColor: pkg.accent }} />
@@ -309,16 +400,76 @@ export default function Index() {
                     </div>
                   ))}
                 </div>
-                <div className="border-t border-[#222] pt-4 space-y-1">
+                <div className="border-t border-[#222] pt-4 space-y-2">
                   <div className="flex justify-between">
-                    <span className="font-body text-xs text-white/30">Тираж</span>
-                    <span className="font-body text-xs text-white/70">{pkg.qty}</span>
+                    <span className="font-body text-xs text-white/30">Мин. тираж</span>
+                    <span className="font-body text-xs text-white/70">{pkg.minQty}</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="font-body text-xs text-white/30">Срок</span>
                     <span className="font-body text-xs text-white/70">{pkg.duration}</span>
                   </div>
+                  <div className="flex justify-between items-center pt-1">
+                    <span className="font-body text-xs text-white/30">Цена</span>
+                    <span className="font-display text-sm gradient-text">{pkg.price}</span>
+                  </div>
                 </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Таблица сравнения */}
+          <div className="rounded-2xl bg-[#111] border border-[#1f1f1f] overflow-hidden">
+            <div className="px-6 py-4 border-b border-[#1f1f1f]">
+              <div className="font-display text-lg tracking-wide">Сравнение пакетов</div>
+            </div>
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead>
+                  <tr className="border-b border-[#1f1f1f]">
+                    <th className="text-left px-6 py-3 font-body text-xs text-white/30 uppercase tracking-wider">Критерий</th>
+                    {PACKAGES.map((pkg) => (
+                      <th key={pkg.id} className="text-center px-4 py-3 font-display text-sm tracking-wide" style={{ color: pkg.accent }}>
+                        {pkg.name}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-[#1a1a1a]">
+                  {[
+                    { label: "Глубина бренда", key: "brand" },
+                    { label: "Тип клиента", key: "client" },
+                    { label: "Категория партнёра", key: "partner" },
+                  ].map((row) => (
+                    <tr key={row.label} className="hover:bg-white/2 transition-colors">
+                      <td className="px-6 py-3 font-body text-xs text-white/50">{row.label}</td>
+                      {PACKAGES.map((pkg) => (
+                        <td key={pkg.id} className="text-center px-4 py-3 font-body text-xs text-white/70">
+                          {pkg.criteria[row.key as keyof typeof pkg.criteria]}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ЦЕНЫ ОТПЕЧАТОК */}
+      <section className="py-16 px-6 bg-[#070707]">
+        <div className="max-w-7xl mx-auto">
+          <div className="mb-10">
+            <div className="section-line mb-4" />
+            <h2 className="font-display text-3xl md:text-4xl uppercase tracking-tight mb-3">Цены пакета «Отпечаток»</h2>
+            <p className="font-body text-white/50">Стоимость за одну штуку — от 1 единицы без оптовой накрутки</p>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+            {PRICES.map((item) => (
+              <div key={item.name} className="rounded-xl bg-[#111] border border-[#1f1f1f] px-4 py-3 flex justify-between items-center card-hover">
+                <span className="font-body text-xs text-white/60">{item.name}</span>
+                <span className="font-display text-sm text-emerald-400 ml-3 shrink-0">{item.price}</span>
               </div>
             ))}
           </div>
